@@ -9,7 +9,7 @@ const InfoCarts = () => {
         {
             id: 1,
             name: 'Opening Hours',
-            description: 'Open 9.00 am to 5.00pm everyday',
+            description: 'Open 9.00 am to 5.00pm Everyday',
             icon: clock,
             bgClass: 'bg-[#19D3AE]'
         },

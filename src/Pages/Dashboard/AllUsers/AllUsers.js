@@ -8,7 +8,7 @@ const AllUsers = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch(`https://doctors-portals-server.vercel.app/users?email=${user?.email}`, {
+            const res = await fetch(`http://localhost:5000/users?email=${user?.email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -18,7 +18,7 @@ const AllUsers = () => {
         }
     })
     const handleAdmin = id => {
-        fetch(`https://doctors-portals-server.vercel.app/users/admin/${id}`, {
+        fetch(`http://localhost:5000/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
